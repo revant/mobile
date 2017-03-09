@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:theme="@android:style/Theme.Material.Light"
+    android:background="@android:color/background_light">
+    <WebView
+        android:id="@+id/webv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/accountFrappeServer"
+        android:hint="Frappe Server"
+        android:inputType="textUri" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/accountClientId"
+        android:hint="ClientId" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/accountScope"
+        android:hint="Scope"
+        android:text="all openid"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/accountRedirectUri"
+        android:hint="Redirect URI"
+        android:text="http://localhost" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/accountClientSecret"
+        android:hint="ClientSecret" />
+
+    <Button android:id="@+id/submit"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="Sign in"
+              android:padding="10dp"/>
+
+</LinearLayout>
+

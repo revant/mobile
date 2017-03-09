@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="io.frappe.frappeauthenticator.sync.ProfileActivity"
+    android:theme="@android:style/Theme.Material.Light.DarkActionBar"
+    android:background="@android:color/background_light">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Name"
+            android:background="@drawable/border"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactNameLabel"
+            android:visibility="gone"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactName"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:background="@drawable/border"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactPhoneLabel"
+            android:textStyle="normal|bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactPhone"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile"
+            android:background="@drawable/border"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:textStyle="normal|bold"
+            android:id="@+id/contactMobileLabel"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactMobile"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Email"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:textStyle="normal|bold"
+            android:id="@+id/contactEmailLabel"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactEmail"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Organization"
+            android:textStyle="normal|bold"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactOrganizationLabel"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:id="@+id/contactOrganization"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</RelativeLayout>

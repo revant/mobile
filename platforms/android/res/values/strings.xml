@@ -4,4 +4,5 @@
     <string name="launcher_name">@string/app_name</string>
     <string name="activity_name">@string/launcher_name</string>
     <string name="aam_account_type">MyAccountType</string>
+    <string name="label">Frappe</string>
 </resources>
