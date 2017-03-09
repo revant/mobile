@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.frappe.mobile" version="0.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <name>ERPNext</name>
+    <description>
+        Mobile Client for ERPNext
+    </description>
+    <author email="hello@erpnext.com" href="https://erpnext.com">
+        Frappe Technologies Private Limited
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/android/icons/ldpi.png" />
+    <icon density="mdpi" src="res/android/icons/mdpi.png" />
+    <icon density="hdpi" src="res/android/icons/hdpi.png" />
+    <icon density="xhdpi" src="res/android/icons/xhdpi.png" />
+    <icon density="xxhdpi" src="res/android/icons/xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/android/icons/xxxhdpi.png" />
+    <splash density="land-hdpi" src="res/android/splash/land-hdpi.png" />
+    <splash density="land-ldpi" src="res/android/splash/land-ldpi.png" />
+    <splash density="land-mdpi" src="res/android/splash/land-mdpi.png" />
+    <splash density="land-xhdpi" src="res/android/splash/land-xhdpi.png" />
+    <splash density="land-xxhdpi" src="res/android/splash/land-xxhdpi.png" />
+    <splash density="land-xxxhdpi" src="res/android/splash/land-xxxhdpi.png" />
+    <splash density="port-hdpi" src="res/android/splash/port-hdpi.png" />
+    <splash density="port-ldpi" src="res/android/splash/port-ldpi.png" />
+    <splash density="port-mdpi" src="res/android/splash/port-mdpi.png" />
+    <splash density="port-xhdpi" src="res/android/splash/port-xhdpi.png" />
+    <splash density="port-xxhdpi" src="res/android/splash/port-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="res/android/splash/port-xxxhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="AccountManager">
+        <param name="android-package" value="com.polychrom.cordova.AccountManagerPlugin" />
+    </feature>
+</widget>

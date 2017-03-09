@@ -1,0 +1,35 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@2.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.7.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.polychrom.cordova.AccountManagerPlugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/polychrom/cordova-android-accountmanager",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
