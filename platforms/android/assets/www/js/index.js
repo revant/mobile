@@ -9,22 +9,9 @@ var app = {
 					return;
 				}
 				if (accounts && accounts.length > 0){
-	    			accounts.forEach(function(account)
-					{
-						$('.android-accounts ul').append('<li class="list-group-item">' + account.name + '</li>');
-		    			$(".android-accounts ul li").click(function() {
-	    					var select_ac = $(this).html();
-	    					console.log(select_ac);
-	    					am.getAuthToken(account, "Full access", true, function(error, result){
-					    		console.log(result);
-					    		console.log(error);
-							});
-						});
-					});
-	    			$('.android-accounts').removeClass("hide");
+					app.start_desk();
 	    		}
 			});
-			return;
     	}
         if(localStorage.getItem("server")) {
             app.setup_login();
