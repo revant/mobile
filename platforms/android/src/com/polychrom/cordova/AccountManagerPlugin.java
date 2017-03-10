@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,10 +20,17 @@ import org.json.JSONObject;
 import android.R.string;
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
+import android.app.Application;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ListView;
+
+import io.frappe.auth.sync.ApplicationController;
+import io.frappe.mobile.MainActivity;
 
 /**! Android AccountManager plugin for Cordova
  *
@@ -57,7 +65,7 @@ public class AccountManagerPlugin extends CordovaPlugin
 	}
 
 	@Override
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException
+	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException
 	{
 		if(manager == null)
 		{
@@ -289,7 +297,7 @@ public class AccountManagerPlugin extends CordovaPlugin
 					return true;
 				}
 				
-				Account account = accounts.get(args.getInt(0));
+				final Account account = accounts.get(args.getInt(0));
 				if(account == null)
 				{
 					callbackContext.error("Invalid account");
@@ -300,25 +308,31 @@ public class AccountManagerPlugin extends CordovaPlugin
 				// TODO: Options support (will be relevent when we support AccountManagers)
 				
 				// TODO: AccountManager support
-				AccountManagerFuture<Bundle> future = manager.getAuthToken(account, args.getString(1), options, args.getBoolean(2), null, null);
-				try
-				{
-					JSONObject result = new JSONObject();
-					result.put("value", future.getResult().getString(AccountManager.KEY_AUTHTOKEN));
-					callbackContext.success(result);
-				}
-				catch (OperationCanceledException e)
-				{
-					callbackContext.error("Operation canceled: " + e.getLocalizedMessage());
-				}
-				catch (AuthenticatorException e)
-				{
-					callbackContext.error("Authenticator error: " + e.getLocalizedMessage());
-				}
-				catch (IOException e)
-				{
-					callbackContext.error("IO error: " + e.getLocalizedMessage());
-				}
+				//AccountManagerFuture<Bundle> future = manager.getAuthToken(account, args.getString(1), options, args.getBoolean(2), null, null);
+				manager.getAuthToken(account, args.getString(1), options, true, new AccountManagerCallback<Bundle>() {
+					Account ctx_account = account;
+					@Override
+					public void run(AccountManagerFuture<Bundle> future) {
+						String authToken;
+						try {
+							Bundle bundle = future.getResult();
+							for (String key : bundle.keySet()) {
+								Object value = bundle.get(key);
+								Log.d("callback", String.format("%s %s", key, value.toString()));
+							}
+							authToken = bundle.getString(AccountManager.KEY_AUTHTOKEN);
+							JSONObject result = new JSONObject();
+							result.put("value", authToken);
+							callbackContext.success(result);
+
+							Log.d("access_token", authToken);
+							manager.invalidateAuthToken(account.type, authToken);
+						} catch (Exception e) {
+							Log.d("error", e.getMessage());
+						}
+					}
+				},null);
+
 				
 				return true;
 			}
