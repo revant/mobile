@@ -20,7 +20,7 @@
  * -Changed package name
  */
 
-package io.frappe.frappeauthenticator.db;
+package io.frappe.auth.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;

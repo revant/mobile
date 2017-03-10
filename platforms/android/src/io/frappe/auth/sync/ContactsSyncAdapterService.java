@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -30,7 +30,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import io.frappe.frappeauthenticator.authenticator.AccountGeneral;
+import io.frappe.auth.authenticator.AccountGeneral;
 
 /**
  * Created by revant on 26/2/17.

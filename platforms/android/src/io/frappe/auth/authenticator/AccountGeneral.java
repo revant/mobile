@@ -1,11 +1,11 @@
-package io.frappe.frappeauthenticator.authenticator;
+package io.frappe.auth.authenticator;
 
 public class AccountGeneral {
 
     /**
      * Account type id
      */
-    public static final String ACCOUNT_TYPE = "io.frappe.frappeauthenticator";
+    public static final String ACCOUNT_TYPE = "io.frappe.auth";
 
     /**
      * Account name

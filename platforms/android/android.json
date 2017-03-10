@@ -31,7 +31,7 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<string name=\"aam_account_type\">MyAccountType</string>",
+                            "xml": "<string name=\"aam_account_type\">io.frappe.auth</string>",
                             "count": 1
                         }
                     ]

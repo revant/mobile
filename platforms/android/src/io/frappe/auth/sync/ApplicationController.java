@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 import android.app.Application;
 import android.text.TextUtils;

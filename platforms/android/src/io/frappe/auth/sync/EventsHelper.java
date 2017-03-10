@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 /**
  * Created by revant on 1/3/17.

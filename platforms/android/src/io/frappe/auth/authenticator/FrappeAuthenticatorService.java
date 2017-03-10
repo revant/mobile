@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.authenticator;
+package io.frappe.auth.authenticator;
 
 import android.app.Service;
 import android.content.Intent;

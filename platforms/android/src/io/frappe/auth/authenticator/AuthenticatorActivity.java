@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.authenticator;
+package io.frappe.auth.authenticator;
 
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;
@@ -23,10 +23,10 @@ import org.json.JSONObject;
 
 import io.frappe.mobile.R;
 
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.AUTH_ENDPOINT;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.OPENID_PROFILE_ENDPOINT;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.TOKEN_ENDPOINT;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.sServerAuthenticate;
+import static io.frappe.auth.authenticator.AccountGeneral.AUTH_ENDPOINT;
+import static io.frappe.auth.authenticator.AccountGeneral.OPENID_PROFILE_ENDPOINT;
+import static io.frappe.auth.authenticator.AccountGeneral.TOKEN_ENDPOINT;
+import static io.frappe.auth.authenticator.AccountGeneral.sServerAuthenticate;
 
 
 /**

@@ -2,36 +2,36 @@
 <manifest android:hardwareAccelerated="true" android:versionCode="7" android:versionName="0.0.7" package="io.frappe.mobile" xmlns:android="http://schemas.android.com/apk/res/android">
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <application android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="io.frappe.frappeauthenticator.sync.ApplicationController" android:supportsRtl="true">
-        <provider android:authorities="io.frappe.frappeauthenticator" android:exported="true" android:name="io.frappe.frappeauthenticator.sync.ContactProvider" android:supportsUploading="false" android:syncable="true" />
-        <activity android:exported="true" android:launchMode="singleTop" android:name="io.frappe.frappeauthenticator.authenticator.AuthenticatorActivity" />
+    <application android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="io.frappe.auth.sync.ApplicationController" android:supportsRtl="true">
+        <provider android:authorities="io.frappe.auth" android:exported="true" android:name="io.frappe.auth.sync.ContactProvider" android:supportsUploading="false" android:syncable="true" />
+        <activity android:exported="true" android:launchMode="singleTop" android:name="io.frappe.auth.authenticator.AuthenticatorActivity" />
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:exported="true" android:name="io.frappe.frappeauthenticator.sync.ContactsSyncAdapterService" android:process=":contacts">
+        <service android:exported="true" android:name="io.frappe.auth.sync.ContactsSyncAdapterService" android:process=":contacts">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter" />
             </intent-filter>
             <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_contacts" />
             <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts" />
         </service>
-        <service android:exported="true" android:name="io.frappe.frappeauthenticator.sync.EventsSyncAdapterService" android:process=":events">
+        <service android:exported="true" android:name="io.frappe.auth.sync.EventsSyncAdapterService" android:process=":events">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter" />
             </intent-filter>
             <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_calendar" />
         </service>
-        <activity android:exported="true" android:label="ERPNext Contact" android:name="io.frappe.frappeauthenticator.sync.ProfileActivity">
+        <activity android:exported="true" android:label="ERPNext Contact" android:name="io.frappe.auth.sync.ProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.io.frappe.frappeauthenticator.contact" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.io.frappe.auth.contact" />
             </intent-filter>
         </activity>
-        <service android:exported="true" android:name="io.frappe.frappeauthenticator.authenticator.FrappeAuthenticatorService">
+        <service android:exported="true" android:name="io.frappe.auth.authenticator.FrappeAuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>

@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.authenticator;
+package io.frappe.auth.authenticator;
 
 import org.json.JSONObject;
 

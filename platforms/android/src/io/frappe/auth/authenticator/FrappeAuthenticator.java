@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.authenticator;
+package io.frappe.auth.authenticator;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;
@@ -14,12 +14,12 @@ import android.util.Log;
 import org.json.JSONObject;
 
 import static android.accounts.AccountManager.KEY_BOOLEAN_RESULT;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS_LABEL;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.AUTHTOKEN_TYPE_READ_ONLY;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.AUTHTOKEN_TYPE_READ_ONLY_LABEL;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.TOKEN_ENDPOINT;
-import static io.frappe.frappeauthenticator.authenticator.AccountGeneral.sServerAuthenticate;
+import static io.frappe.auth.authenticator.AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS;
+import static io.frappe.auth.authenticator.AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS_LABEL;
+import static io.frappe.auth.authenticator.AccountGeneral.AUTHTOKEN_TYPE_READ_ONLY;
+import static io.frappe.auth.authenticator.AccountGeneral.AUTHTOKEN_TYPE_READ_ONLY_LABEL;
+import static io.frappe.auth.authenticator.AccountGeneral.TOKEN_ENDPOINT;
+import static io.frappe.auth.authenticator.AccountGeneral.sServerAuthenticate;
 
 /**
  * Created with IntelliJ IDEA.

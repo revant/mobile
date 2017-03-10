@@ -1,8 +1,10 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
+
+import io.frappe.auth.authenticator.AccountGeneral;
 
 /**
  * Created by revant on 2/3/17.
@@ -15,7 +17,7 @@ public class ContactContract {
     /**
      * Content provider authority.
      */
-    public static final String CONTENT_AUTHORITY = "io.frappe.frappeauthenticator";
+    public static final String CONTENT_AUTHORITY = AccountGeneral.ACCOUNT_TYPE;
 
     /**
      * Base URI. (content://com.example.android.basicsyncadapter)

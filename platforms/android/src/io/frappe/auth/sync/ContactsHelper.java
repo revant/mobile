@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 /**
  * Created by revant on 1/3/17.
@@ -176,7 +176,7 @@ public class ContactsHelper {
 
         op_list.add(ContentProviderOperation.newInsert(addCallerIsSyncAdapterParameter(ContactsContract.Data.CONTENT_URI, true))
                 .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
-                .withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.io.frappe.frappeauthenticator.contact")
+                .withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.io.frappe.auth.contact")
                 .withValue(ContactsContract.Data.DATA1, mobileNo)
                 .withValue(ContactsContract.Data.DATA2, displayName)
                 .withValue(ContactsContract.Data.DATA3, contactName)

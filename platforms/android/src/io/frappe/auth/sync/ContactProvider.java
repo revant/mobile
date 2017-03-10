@@ -1,4 +1,4 @@
-package io.frappe.frappeauthenticator.sync;
+package io.frappe.auth.sync;
 
 /**
  *
@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
-import io.frappe.frappeauthenticator.db.SelectionBuilder;
+import io.frappe.auth.db.SelectionBuilder;
 
 /**
  * @author natanael
