@@ -73,7 +73,7 @@ window.desk = {
   			},
 			url: url,
 			data: {
-				build_version: localStorage._build_version || "000"
+				build_version: /*localStorage._build_version ||*/ "000"
 			}
 		}).success(function(data) {
 			// desk startup
@@ -120,7 +120,6 @@ window.desk = {
 	setup_assets: function() {
 		if (desk.frappe_server){
 			localStorage.server = desk.frappe_server;
-			frappe.request = {};
 		} 
 
 		for(key in desk.desk_assets) {
