@@ -57,7 +57,11 @@ window.desk = {
 		common.handle_external_links();
 	},
 	start: function(version) {
-		if (desk.frappe_server) localStorage.server = desk.frappe_server;
+		var build_version = localStorage._build_version;
+		if (desk.frappe_server) {
+			localStorage.server = desk.frappe_server;
+			build_version = "000";
+		}
 		console.log(localStorage.server);
 		var url =  localStorage.server + "/api/method/frappe.www.desk.get_desk_assets";
 		if(version && version === "v6") {
@@ -73,7 +77,7 @@ window.desk = {
   			},
 			url: url,
 			data: {
-				build_version: /*localStorage._build_version ||*/ "000"
+				build_version: build_version
 			}
 		}).success(function(data) {
 			// desk startup
